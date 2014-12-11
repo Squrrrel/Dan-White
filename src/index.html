@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="starfield.js"></script>
+	<link rel="stylesheet" href="css/en_default.css" />
+  <script src="jquery-1.11.1.min.js"></script>
+	<style type="text/css">
+	html, body {
+		margin: 0px;
+        background: #000;
+        height: 100%;
+    }
+    canvas {
+		display: block;
+        width: 100%;
+        height: 100%;
+        z-index: -999999999;
+	}
+	</style>
+	<script>
+	$(document).ready(function() {
+	  $('#site-menu').hide();
+	});
+	var menuActive = false;
+	  $(document).on('click', '#menu-toggle', function() {
+      $(this).toggleClass('menu-burger--is-active');
+      $("#site-menu").toggle();
+    });
+
+    if(menuActive == true) {
+      $('#site-menu').css("left", "0vh");
+      $('#site-menu').css("position", "relative");
+    } else {
+      $('#site-menu').css("left", "-500vh");
+    }
+	</script>
+</head>
+<body>
+
+  <div id="site-content">
+    <button type="button" id="menu-toggle" class="menu-burger"><i>Show Menu</i></button>
+    <div id="site-menu" class="site-menu-div">
+      <div id="Home"><p>Home</p></div>
+      <div id="who_am_i"><p>Who Am I?</p></div>
+      <div id="about_me"><p>About Me</p></div>
+      <div id="contact"><p>Contact</p></div>
+    </div>
+  </div>
+<canvas id="canvas" width="100%" height="100%"></canvas>
+</body>
+</html>
