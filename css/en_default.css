@@ -1,0 +1,201 @@
+* {
+  overflow: none;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.menu-burger {
+  width: 20px;
+  height: 14px;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.2s;
+  transition-delay: 0.15s;
+  color: white;
+}
+.menu-burger:hover {
+  cursor: pointer;
+}
+.menu-burger i {
+  display: block;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 2px;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+}
+.menu-burger:before, .menu-burger:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 0;
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  left: 0;
+  right: 0;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: right bottom;
+}
+.menu-burger:after {
+  top: 100%;
+  transform-origin: right bottom;
+}
+.menu-burger--is-active {
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0.2s;
+    left: 18vh;
+}
+.menu-burger--is-active:hover {
+  cursor: pointer;
+}
+.menu-burger--is-active i {
+  opacity: 0;
+  transition-delay: 0;
+  left: 16vh;
+}
+.menu-burger--is-active:after {
+  transform: rotate3d(0, 0, 1, 45deg) translate3d(-1px, 1px, 0);
+    left: 16vh;
+}
+.menu-burger--is-active:before {
+  transform: rotate3d(0, 0, 1, -45deg) translate3d(0, 0, 0);
+    left: 16vh;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: white;
+}
+
+.menu-burger {
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+  margin: -7px 0 0 -10px;
+  color: white;
+}
+
+#site-menu {
+  position: absolute;
+  height: 100%;
+  width: 15vh;
+  overflow: hidden;
+  background: rgb(150,150,150);
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+#home {
+  position: relative;
+  top: -0;
+  background: white;
+  content: "<p>Home</p>";
+  color: #009fee;
+  height: 5vh;
+  width: 100%;
+}
+#home p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: Sans-serif;
+}
+#home:hover {
+  background: #009fee;
+  color: white;
+  height: 15vh;
+}
+#who_am_i {
+  position: relative;
+  top: -0;
+  background: white;
+  content: "<p>Who Am I?</p>";
+  color: #009fee;
+  height: 5vh;
+  width: 100%;
+}
+#who_am_i p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: Sans-serif;
+}
+#who_am_i:hover {
+  background: #009fee;
+  color: white;
+  height: 15vh;
+}
+#about_me {
+  position: relative;
+  top: -0;
+  background: white;
+  content: "<p>Who Am I?</p>";
+  color: #009fee;
+  height: 5vh;
+  width: 100%;
+}
+#about_me p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: Sans-serif;
+}
+#about_me:hover {
+  background: #009fee;
+  color: white;
+  height: 15vh;
+}
+#contact {
+  position: relative;
+  top: -0;
+  background: white;
+  content: "<p>Who Am I?</p>";
+  color: #009fee;
+  height: 5vh;
+  width: 100%;
+}
+#contact p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: Sans-serif;
+}
+#contact:hover {
+  background: #009fee;
+  color: white;
+  height: 15vh;
+}
