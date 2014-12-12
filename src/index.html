@@ -8,6 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Hind:400,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700|Hind:400,300,500,600,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=devanagari,cyrillic,cyrillic-ext,latin,greek-ext,greek,latin-ext,vietnamese' rel='stylesheet' type='text/css'>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="fonts/styles.css" rel="stylesheet" />
 	<style type="text/css">
 	html, body {
 		margin: 0px;
@@ -20,18 +21,75 @@
         height: 100%;
         z-index: -999999999;
 	}
+	.data-icon {
+	  padding: 2vh !important;
+	  font-size: 2.5vh !important;
+	}
+	#home, #who_am_i, #about_me, #contact {
+	  color: white !important;
+	  padding: 10px 10px 10px 10px !important;
+	}
+	#home:hover, #who_am_i:hover, #about_me:hover, #contact:hover {
+	  color: #009fee !important;
+	  cursor: pointer;
+	}
 	</style>
 	<script>
+
 	$(document).ready(function() {
-	  $('#site-menu').hide();
+	  $('#site-menu').css('top', '-50vh');
 	});
-	var menuActive = false;
+    $("#home").hover(function() {
+      $('#home-arrow').show();
+    });
 	  $(document).on('click', '#menu-toggle', function() {
       $(this).toggleClass('menu-burger--is-active');
+      $('#site-menu').css('top', '5vh');
+      $('#site-menu').css('opacity', "1");
+      $('#site-menu-arrows').css('top', '5vh');
+      $('#site-menu-arrows').css('opacity', "1");
+      $(this).attr('id', 'menu-close');
     });
+    $(document).on('click', "#menu-close", function() {
+      $(this).toggleClass('menu-burger--is-active');
+      $(this).attr('id', 'menu-toggle');
+      $('#site-menu').css('top', "-50vh");
+      $('#site-menu').css('opacity', "0");
+      $('#site-menu-arrows').css('top', '-50vh');
+      $('#site-menu-arrows').css('opacity', "0");
+    });
+
+    $(document).on('click', "menu-burger--is-active", function() {
+      $('#site-menu').css('top', "-50vh");
+    });
+
     $(document).on('click', '#close_help_menu', function() {
       $('#menu-button-help').toggle();
     });
+
+    $(".home").on({
+      mouseenter: function () {
+      $('.home-arrow').css("opacity", "1");
+    },
+      mouseleave: function () {
+      $('.home-arrow').css('opacity', "0");
+    }
+    });
+
+
+    $('#home-hover').hover(function() {
+      $('#home-arrow').hide();
+    })
+    $('#who_am_i').mouseover(function() {
+      $('#who_am_i-arrow').css('opacity', "1");
+    });
+    $('#about_me').mouseover(function() {
+      $('#about_me-arrow').css('opacity', "1");
+    });
+    $('#contact').mouseover(function() {
+      $('#contact-arrow').css('opacity', "1");
+    });
+
 
 	</script>
 </head>
@@ -44,10 +102,24 @@
       <button id="close_help_menu">Got it!</button>
     </div>
     <div id="site-menu" class="site-menu-div">
-      <div id="Home"><a class="list-grou-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp;</a></div>
-      <div id="who_am_i"><p>Who Am I?</p></div>
-      <div id="about_me"><p>About Me</p></div>
-      <div id="contact"><p>Contact</p></div>
+      <div id="home-hover"><div id="home" class="home" style="width: 32px; height: 32px;"><i class="data-icon" id="data-icon-home" data-icon="a"></i></div></div>
+      <div id="who_am_i" class="who_am_i" style="width: 32px; height: 32px;"><i class="data-icon" data-icon="b"></i></div>
+      <div id="about_me" class="about_me" style="width: 32px; height: 32px;"><i class="data-icon" data-icon="c"></i></div>
+      <div id="contact" class="contact" style="width: 32px; height: 32px;"><p><i class="data-icon" data-icon="d"></i></p></div>
+    </div>
+    <div id="site-menu-arrows" class="site-menu-arrows-div">
+      <div id="home-arrow" class="home-arrow">
+        <p>Home</p>
+      </div>
+      <div id="who_am_i-arrow">
+        <p>Who Am I?</p>
+      </div>
+      <div id="about_me-arrow">
+        <p>About Me</p>
+      </div>
+      <div id="contact-arrow">
+        <p>Contact</p>
+      </div>
     </div>
   </div>
 <canvas id="canvas" width="100%" height="100%"></canvas>

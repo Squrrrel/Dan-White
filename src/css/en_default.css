@@ -147,16 +147,148 @@ button {
   color: white;
 }
 
-#site-menu {
+#site-menu, #site-menu-arrows {
   position: absolute;
-  height: 100%;
-  width: 15vh;
-  overflow: hidden;
   background: transparent;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  top: 43%;
+  top: -50vh;
+  left: -1.1vh;
+  opacity: 0;
 }
+#home-arrow {
+  position: absolute;
+  width: 20vh;
+  height: 4vh;
+  background: white;
+  left: 7vh;
+  top: 0.5vh;
+  opacity: 1;
+}
+#home-arrow:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 10px solid transparent;
+  border-right-color: white;
+  left: -2vh;
+  top: 10px;
+}
+#home-arrow p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+#who_am_i-arrow {
+  position: absolute;
+  width: 20vh;
+  height: 4vh;
+  background: white;
+  left: 7vh;
+  top: 5.4vh;
+  -moz-box-shadow: -6px 0px 25px #000;
+  -webkit-box-shadow: -6px 0px 25px #000;
+  box-shadow: -6px 0px 25px #000;
+}
+#who_am_i-arrow:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 10px solid transparent;
+  border-right-color: white;
+  left: -2vh;
+  top: 10px;
+}
+#who_am_i-arrow p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
+#about_me-arrow {
+  position: absolute;
+  width: 20vh;
+  height: 4vh;
+  background: white;
+  left: 7vh;
+  top: 10.3vh;
+  -moz-box-shadow: -6px 0px 25px #000;
+  -webkit-box-shadow: -6px 0px 25px #000;
+  box-shadow: -6px 0px 25px #000;
+}
+#about_me-arrow:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 10px solid transparent;
+  border-right-color: white;
+  left: -2vh;
+  top: 10px;
+}
+#about_me-arrow p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
+#contact-arrow {
+  position: absolute;
+  width: 20vh;
+  height: 4vh;
+  background: white;
+  left: 7vh;
+  top: 15vh;
+  -moz-box-shadow: -6px 0px 25px #000;
+  -webkit-box-shadow: -6px 0px 25px #000;
+  box-shadow: -6px 0px 25px #000;
+}
+#contact-arrow:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 10px solid transparent;
+  border-right-color: white;
+  left: -2vh;
+  top: 10px;
+}
+#contact-arrow p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+}
+
+#home-arrow, #who_am_i-arrow, #about_me-arrow, #contact-arrow, #home, #who_am_i, #about_me, #contact {
+    -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+

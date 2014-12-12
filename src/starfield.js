@@ -63,7 +63,8 @@ function start() {
         }
     };
 
-    //Canvas and settings
+    //Canvas and settingsv
+    var randomStarAngle = randomRange(1, 360);
     var canvas = document.getElementById("canvas"),
         context = canvas.getContext("2d"),
         width = canvas.width = window.innerWidth,
@@ -75,10 +76,10 @@ function start() {
             { speed: 0.03, scale: 0.5, count: 50 },
             { speed: 0.05, scale: 0.75, count: 30 }
         ],
-        starsAngle = 145,
+        starsAngle = randomStarAngle,
         shootingStarSpeed = {
-            min: 15,
-            max: 20
+            min: 5,
+            max: 25
         },
         shootingStarOpacityDelta = 0.01,
         trailLengthDelta = 0.01,
@@ -96,7 +97,7 @@ function start() {
             var star = particle.create(randomRange(0, width), randomRange(0, height), 0, 0);
             star.radius = starBaseRadius * layer.scale;
             star.setSpeed(layer.speed);
-            star.setHeading(degreesToRads(starsAngle));
+            star.setHeading(degreesToRads(Math.random()*360));
             stars.push(star);
         }
     }
@@ -104,7 +105,7 @@ function start() {
     function createShootingStar() {
         var shootingStar = particle.create(randomRange(width / 2, width), randomRange(0, height / 2), 0, 0);
         shootingStar.setSpeed(randomRange(shootingStarSpeed.min, shootingStarSpeed.max));
-        shootingStar.setHeading(degreesToRads(starsAngle));
+        shootingStar.setHeading(degreesToRads(Math.random()*360));
         shootingStar.radius = shootingStarRadius;
         shootingStar.opacity = 0;
         shootingStar.trailLengthDelta = 0;
