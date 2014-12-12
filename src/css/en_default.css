@@ -147,7 +147,7 @@ button {
   color: white;
 }
 
-#site-menu {
+#site-menu, #site-menu-arrows {
   position: absolute;
   background: transparent;
   -webkit-transition: all 0.25s ease-in-out;
@@ -155,7 +155,9 @@ button {
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  top: 43%;
+  top: -50vh;
+  left: -1.1vh;
+  opacity: 0;
 }
 #home-arrow {
   position: absolute;
@@ -164,9 +166,7 @@ button {
   background: white;
   left: 7vh;
   top: 0.5vh;
-  -moz-box-shadow: -6px 0px 25px #000;
-  -webkit-box-shadow: -6px 0px 25px #000;
-  box-shadow: -6px 0px 25px #000;
+  opacity: 1;
 }
 #home-arrow:after {
   content: ' ';
